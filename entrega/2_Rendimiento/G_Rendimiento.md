@@ -1,7 +1,7 @@
 # Informe 2 – Rendimiento (carga y estrés) · Nova / UniDoc · Aspirante
 
 ## 1. Portada y control de versiones
-Grupo: sin número asignado · Integrantes: ver la portada de este documento · Aplicación: UniDoc – Aspirante · Fechas: 2026-11-16 y 2026-11-17 · v1.1 · Autores: Lenny Chilito (ejecuciones 1 y 2). Pendiente: análisis y redacción final de Calet Ibarra (paquetes R2 y D3)
+Grupo: sin número asignado · Integrantes: ver la portada de este documento · Aplicación: UniDoc – Aspirante · Fechas: 2026-11-16 y 2026-11-17 · v1.1 · Autores: Lenny Chilito (ejecuciones 1 y 2 y redacción) · Calet Ibarra (script, targets y salidas de la ejecución 1 en el repositorio)
 
 ## 2. Resumen ejecutivo
 Los flujos públicos que usa un aspirante (inicio de UniDoc, listado de convocatorias, pantalla de inicio de sesión) respondieron **sin ningún error en 4 440 peticiones** (1 – 20 peticiones por segundo) en la primera ejecución (16-nov). La mediana fue ≈33 ms y el p95 nunca superó 53 ms, muy por debajo del umbral de 2 s. En esa ejecución **no se encontró punto de degradación ni de ruptura dentro del tope probado (20 req/s)**; la capacidad real por encima de ese valor es desconocida porque el tope fue autoimpuesto. Una **segunda ejecución** el 17-nov (otras 4 440 peticiones, también sin errores) confirmó la mediana de ≈34 ms, pero a 20 req/s mostró una **cola de latencia**: el 1 % más lento llegó a 377 ms (p99) y una petición a 952 ms. Es la primera señal posible de saturación cerca del tope, y debe confirmarse repitiendo ese nivel. Recomendación: repetir el estrés con el límite que fije el docente y probar flujos autenticados.
@@ -49,7 +49,7 @@ Incidente: la primera corrida de carga se descartó porque PowerShell 5.1 corrom
 | 20 | 1 200 | 32,3 ms | 46,4 ms | 64,5 ms | 175,6 ms | 20,01 | 0 % |
 | Recuperación 1 | 30 | 34,6 ms | 56,8 ms | 106,4 ms | 106,4 ms | 1,03 | 0 % |
 
-Histogramas y salidas completas de la ejecución 1: `aporte-calet/resultados/` (copia de las salidas originales subida por Calet Ibarra) y repositorio FinalCD2, carpeta `rendimiento/resultados/`.
+Histogramas y salidas completas de la ejecución 1: `rendimiento/resultados/` (subidas por Calet Ibarra; hay una copia idéntica en `aporte-calet/`).
 
 ### 9.1 Segunda ejecución (17-nov, Lenny – paquete R1)
 **Carga**
@@ -87,4 +87,4 @@ Cumple los criterios en el rango probado. Capacidad estimada: ≥20 req/s sosten
 Un solo cliente y una sola IP; red de origen externa; tope bajo autoimpuesto; servidor compartido con otras aplicaciones; posible caché/CDN que oculta el costo del backend; no se probó ningún flujo con sesión (login por Google fuera de alcance).
 
 ## 13. Anexos
-Ejecución 1: script `run-vegeta.ps1`, targets y salidas en `aporte-calet/` (copia subida por Calet Ibarra) y en el repositorio FinalCD2 (`rendimiento/`). Ejecución 2: `entrega/2_Rendimiento/R1_Lenny/` (targets, `.txt` e histogramas) y `notas_ejecucion_R1_Lenny.md`. Los `.bin` no se versionan.
+Ejecución 1: script `rendimiento/run-vegeta.ps1`, `rendimiento/targets-aspirante.txt` y salidas en `rendimiento/resultados/` (copia idéntica en `aporte-calet/`). Ejecución 2: `entrega/2_Rendimiento/R1_Lenny/` (targets, `.txt` e histogramas) y `notas_ejecucion_R1_Lenny.md`. Los `.bin` no se versionan.
