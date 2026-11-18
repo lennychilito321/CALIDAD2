@@ -44,7 +44,7 @@ No se encontraron defectos funcionales. Las validaciones del inicio de sesión y
 - **Rol Docencia:** ninguna cuenta del grupo tiene ese rol. La suite existe pero está desactivada.
 - **Postulación real (FUN-15), carga de documentos, edición de la hoja de vida y completar el registro hasta el paso 5:** crean o modifican datos reales en un sistema compartido. El registro solo se prueba hasta el paso 2.
 - **Envío del formulario de recuperación de contraseña:** mandaría correos reales. Solo se verifica que la pantalla abre.
-- **Inicio de sesión con Google:** es un servicio de terceros que bloquea la automatización.
+- **Inicio de sesión con Google:** es un servicio de terceros que bloquea la automatización. Por eso los casos con sesión (FUN-01, FUN-10 a FUN-16) solo pueden correrlos integrantes con una cuenta de correo y contraseña de UniDoc. Las cuentas nuevas tardan varios días en recibir permisos, así que en el equipo de Miguel solo se ejecutaron los casos sin sesión.
 - **Recepción con IA, Normativas y notificaciones:** no son parte de los flujos mínimos del rol.
 
 ## 4. Descripción de la aplicación y del rol
