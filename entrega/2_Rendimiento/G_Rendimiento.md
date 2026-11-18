@@ -49,7 +49,7 @@ Incidente: la primera corrida de carga se descartó porque PowerShell 5.1 corrom
 | 20 | 1 200 | 32,3 ms | 46,4 ms | 64,5 ms | 175,6 ms | 20,01 | 0 % |
 | Recuperación 1 | 30 | 34,6 ms | 56,8 ms | 106,4 ms | 106,4 ms | 1,03 | 0 % |
 
-Histogramas y salidas completas de la ejecución 1: repositorio FinalCD2, carpeta `rendimiento/resultados/`.
+Histogramas y salidas completas de la ejecución 1: `aporte-calet/resultados/` (copia de las salidas originales subida por Calet Ibarra) y repositorio FinalCD2, carpeta `rendimiento/resultados/`.
 
 ### 9.1 Segunda ejecución (17-nov, Lenny – paquete R1)
 **Carga**
@@ -87,4 +87,4 @@ Cumple los criterios en el rango probado. Capacidad estimada: ≥20 req/s sosten
 Un solo cliente y una sola IP; red de origen externa; tope bajo autoimpuesto; servidor compartido con otras aplicaciones; posible caché/CDN que oculta el costo del backend; no se probó ningún flujo con sesión (login por Google fuera de alcance).
 
 ## 13. Anexos
-Ejecución 1: script `run-vegeta.ps1`, targets y salidas en el repositorio FinalCD2 (`rendimiento/`). Ejecución 2: `entrega/2_Rendimiento/R1_Lenny/` (targets, `.txt` e histogramas) y `notas_ejecucion_R1_Lenny.md`. Los `.bin` no se versionan.
+Ejecución 1: script `run-vegeta.ps1`, targets y salidas en `aporte-calet/` (copia subida por Calet Ibarra) y en el repositorio FinalCD2 (`rendimiento/`). Ejecución 2: `entrega/2_Rendimiento/R1_Lenny/` (targets, `.txt` e histogramas) y `notas_ejecucion_R1_Lenny.md`. Los `.bin` no se versionan.
