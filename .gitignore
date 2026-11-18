@@ -1,0 +1,16 @@
+node_modules/
+cypress.env.json
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+.env
+entrega/4_Repositorio_Cypress/
+rendimiento/bin/
+rendimiento/resultados/**/*.bin
+seguridad/.gvm-admin-pass.txt
+seguridad/*.log
+seguridad/greenbone/*.log
+*.log
+cy-run.log
+entrega/pdf/
+seguridad/reportes/
