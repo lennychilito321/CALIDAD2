@@ -33,12 +33,14 @@ Equipo: Windows 11 Pro, Node v25.8.1, Cypress 13.17.0, navegador Electron (headl
 | Fecha y hora | Comando | Resultado |
 |---|---|---|
 | 2026-11-17 22:55 | `npx cypress run --spec "cypress/e2e/auth/miguel.cy.js,cypress/e2e/publico/**"` | **7/7 aprobados**: FUN-20 a FUN-23 y FUN-17 a FUN-19 |
-| 2026-11-17 22:56 | `npx cypress run --spec "cypress/e2e/auth/login.cy.js"` | FUN-02, FUN-03 y FUN-04 aprobados; **FUN-01 no ejecutado**: falló porque en mi equipo no había un `cypress.env.json` con cuenta configurado ("Faltan ASPIRANTE_USER / ASPIRANTE_PASS") |
+| 2026-11-17 22:56 | `npx cypress run --spec "cypress/e2e/auth/login.cy.js"` | FUN-02, FUN-03 y FUN-04 aprobados; **FUN-01 no ejecutado** ("Faltan ASPIRANTE_USER / ASPIRANTE_PASS") |
+
+**Por qué FUN-01 no se ejecutó en mi equipo:** mi cuenta de UniDoc entra con "Iniciar sesión con Google", y Cypress no puede automatizar ese inicio de sesión (sección 3 del informe). FUN-01 necesita una cuenta con correo y contraseña de UniDoc. Crear una cuenta nueva no era viable antes de la entrega: los permisos de las cuentas nuevas tardan varios días en asignarse y la solicitud no se resolvió a tiempo. FUN-01 sí fue aprobado en la corrida del grupo del 17-nov (`evidencia/login.cy.js.mp4`). Por eso se registra como **limitación de mi ejecución, no como defecto**.
 
 ## 4. Revisión de los casos existentes de F1
 | Caso | Revisión |
 |---|---|
-| FUN-01 | Correcto, pero depende de la cuenta en `cypress.env.json`. Queda pendiente repetirlo en mi equipo con mi cuenta. |
+| FUN-01 | Correcto, pero depende de una cuenta con correo y contraseña en `cypress.env.json`. No se puede repetir con cuentas que solo entran con Google (ver sección 3). |
 | FUN-02 | Correcto. Verifica el mensaje y la ruta. |
 | FUN-03 | Correcto. Ahora FUN-20 y FUN-21 prueban cada mensaje por separado. |
 | FUN-04 | Correcto, aunque solo comprueba que no aparezca "Hoja de vida". Sería más fuerte comprobar también que redirige al login. |
