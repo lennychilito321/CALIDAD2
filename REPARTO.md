@@ -52,3 +52,10 @@ Revisar = leer el cambio, correr las pruebas si aplica y dejar al menos un comen
 
 ## Control de equidad
 Al final, cada uno debería tener 3 paquetes, 3 o más commits y 1 revisión hecha. Se comprueba en GitHub → Insights → Contributors.
+
+## Cómo se evitan los conflictos (archivos propios)
+Cada uno trabaja en **archivos con su nombre**; no se editan los mismos archivos a la vez:
+- Casos nuevos: Miguel FUN-20 a 24 · Lenny FUN-25 a 29 · Calet FUN-30 a 34 · Luis FUN-35 a 39, cada uno en su propio `.cy.js` y en `entrega/1_Funcionales/casos_nuevos_<Nombre>.md`.
+- Informe 1: Miguel entrega `secciones_1_a_7_Miguel.md`; Luis entrega `revision_secciones_8_a_13_Luis.md`; **Lenny integra todo en `G_Funcionales.md`**.
+- Informe 2: solo **Calet** edita `G_Rendimiento.md`.
+- Informe 3: Miguel entrega `analisis_VUL-01_a_04_Miguel.md`; **Luis integra todo en `G_Vulnerabilidades.md`**.
